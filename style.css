@@ -1,148 +1,228 @@
+
+/* PENGATURAN DASAR */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #b45d5d;
-    margin: 0;
-    padding: 20px;
-    color: #4b0b0b;
-}
-
-.profile {
-    max-width: 750px;
-    margin: auto;
-    padding: 20px;
-    border: 2px solid #4b0b0b;
-    background-color: rgb(255, 226, 226);
-}
-
-.header {
-    margin-top: 0;
-    border-bottom: 1px solid #400b0b;
-    padding-bottom: 10px;
-}
-
-.profile-info {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-}
-
-.foto-profil {
-    width: 150px;
-    height: 120px;
-    object-fit: cover;
-    border: 1px solid #400b0b;
-}
-
-.identitas {
-    flex: 1;
-}
-
-.identitas h1 {
-    margin: 0 0 10px;
-    font-size: 26px;
-}
-
-.identitas p {
-    margin: 6px 0;
-    font-size: 13px;
-}
-
-.kategori {
-    width: 100px;
-    text-align: center;
-    font-size: 12px;
-}
-
-.kategori h4 {
-    margin: 0 0 8px;
-}
-
-.kategori p {
-    margin: 5px 0;
-}
-
-.deskripsi {
-    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #cea3a3;
+    color: #666;
     font-size: 14px;
-    line-height: 1.6;
-    text-align: justify;
+    line-height: 1.7;
 }
 
-.media {
-    display: flex;
-    gap: 10px;
-    align-items: stretch;
-    margin-top: 30px;
+.container {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 15px;
 }
 
-.media > div {
-    border: 1px solid #555;
-    padding: 8px;
-}
-
-.media h3 {
-    margin: 0 0 10px;
-    font-size: 14px;
-}
-
-.video {
-    flex: 1.2;
-}
-
-.video video {
-    width: 100%;
-}
-
-.galeri {
-    flex: 1;
+/* KARTU BIODATA */
+.profile-card {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 24px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    align-content: start;
+    grid-template-columns: 135px 1fr 205px;
+    gap: 25px;
+    align-items: start;
+    margin-bottom: 25px;
 }
 
-.galeri h3 {
-    grid-column: 1 / -1;
-}
-
-.galeri img {
-    width: 100%;
-    height: 55px;
+.profile-photo {
+    width: 135px;
+    height: 145px;
     object-fit: cover;
-    border: 1px solid #aaa;
 }
 
-.lampiran {
-    flex: 1.2;
+.profile-info h2 {
+    font-size: 17px;
+    font-weight: normal;
+    margin: 3px 0;
+}
+
+.profile-info p {
+    margin-bottom: 5px;
+}
+
+.label {
     font-size: 12px;
+    letter-spacing: 1px;
+    color: #999;
 }
 
-.lampiran ul {
-    padding-left: 18px;
-}
-
-.lampiran li {
-    margin-bottom: 10px;
+.contact {
+    margin-top: 14px;
 }
 
 a {
-    color: blue;
+    color: #3977a5;
+    text-decoration: none;
 }
 
-@media (max-width: 600px) {
-    .profile-info {
-        flex-wrap: wrap;
+a:hover {
+    text-decoration: underline;
+}
+
+/* KATEGORI */
+.categories {
+    padding: 12px 15px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+}
+
+.categories h3,
+.content-card h3 {
+    font-size: 12px;
+    font-weight: normal;
+    color: #555;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.categories p {
+    margin-bottom: 8px;
+}
+
+/* DESKRIPSI DIRI */
+.description-card {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 28px;
+}
+
+.description-card p + p {
+    margin-top: 12px;
+}
+
+/* TATA LETAK KONTEN */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 0.65fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.content-card {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 14px;
+    min-width: 0;
+}
+
+.video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #111;
+    border-radius: 5px;
+}
+
+/* GALERI */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* KOLOM KANAN */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.attachments-card a {
+    display: block;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.download-button {
+    display: block;
+    background: #0868c9;
+    color: #fff;
+    text-align: center;
+    padding: 11px 8px;
+    border-radius: 7px;
+    transition: background 0.2s;
+}
+
+.download-button:hover {
+    background: #0756a5;
+    text-decoration: none;
+}
+
+/* RESPONSIVE: TABLET */
+@media (max-width: 850px) {
+    .profile-card {
+        grid-template-columns: 110px 1fr;
     }
 
-    .media {
-        flex-direction: column;
+    .profile-photo {
+        width: 110px;
+        height: 125px;
     }
 
-    .kategori {
-        text-align: left;
+    .categories {
+        grid-column: 1 / -1;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .right-column {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* RESPONSIVE: HP */
+@media (max-width: 550px) {
+    .container {
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 130px;
+    }
+
+    .content-grid,
+    .right-column {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column {
+        grid-column: auto;
+    }
+
+    .gallery img {
+        height: 150px;
     }
 }
