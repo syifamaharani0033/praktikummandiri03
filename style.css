@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b45d5d;
+    margin: 0;
+    padding: 20px;
+    color: #4b0b0b;
+}
+
+.profile {
+    max-width: 750px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #4b0b0b;
+    background-color: rgb(255, 226, 226);
+}
+
+.header {
+    margin-top: 0;
+    border-bottom: 1px solid #400b0b;
+    padding-bottom: 10px;
+}
+
+.profile-info {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.foto-profil {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #400b0b;
+}
+
+.identitas {
+    flex: 1;
+}
+
+.identitas h1 {
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.identitas p {
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+.kategori {
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.kategori h4 {
+    margin: 0 0 8px;
+}
+
+.kategori p {
+    margin: 5px 0;
+}
+
+.deskripsi {
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.media {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    margin-top: 30px;
+}
+
+.media > div {
+    border: 1px solid #555;
+    padding: 8px;
+}
+
+.media h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.video {
+    flex: 1.2;
+}
+
+.video video {
+    width: 100%;
+}
+
+.galeri {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    align-content: start;
+}
+
+.galeri h3 {
+    grid-column: 1 / -1;
+}
+
+.galeri img {
+    width: 100%;
+    height: 55px;
+    object-fit: cover;
+    border: 1px solid #aaa;
+}
+
+.lampiran {
+    flex: 1.2;
+    font-size: 12px;
+}
+
+.lampiran ul {
+    padding-left: 18px;
+}
+
+.lampiran li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: blue;
+}
+
+@media (max-width: 600px) {
+    .profile-info {
+        flex-wrap: wrap;
+    }
+
+    .media {
+        flex-direction: column;
+    }
+
+    .kategori {
+        text-align: left;
+    }
+}
